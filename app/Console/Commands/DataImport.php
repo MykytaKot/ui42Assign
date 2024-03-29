@@ -2,13 +2,14 @@
 
 namespace App\Console\Commands;
 
-
+use App\Models\Place;
 use App\Models\WebsiteParsing;
 
 use Illuminate\Console\Command;
 
 class DataImport extends Command
 {
+    private $region_url = 'https://www.e-obce.sk/kraj/NR.html';
     /**
      * The name and signature of the console command.
      *
@@ -30,12 +31,41 @@ class DataImport extends Command
      */
     public function handle()
     {
+        //get districts of a region
         $webParser = new WebsiteParsing();
-        $districts = $webParser->getDistricts('https://www.e-obce.sk/kraj/NR.html');
-        $vilages = $webParser->getPlaces($districts['Komárno']);
-        $place = $webParser->getInfoAboutPlace($vilages['Čalovec']);
-        var_dump($place);
+        $districts = $webParser->getDistricts($this->region_url);
+        if($districts == 0){
+            echo("error getting districts");
+            return Command::FAILURE;
+        }
+        //loop for each district to load places in a district
+        foreach ($districts as $district) {
+            $places = $webParser->getPlaces($district);
+            if($places == 0){
+                echo("error getting places");
+                return Command::FAILURE;
+            }
+            //parse a place and save to database
+            foreach ($places as $place) {
+                if($place == 0){
+                    echo("error getting place");
+                    return Command::FAILURE;
+                }
+                echo("parsing $place \n");
+                $place = $webParser->getInfoAboutPlace($place);
+                if($place == 0){
+                    echo("error getting info about place");
+                    return Command::FAILURE;
+                
+                }
+                $place = new Place($place);
+                $place->save_to_database();
+            }
+        }
+
+        
+        
         echo("job done!");
         return Command::SUCCESS;
     }
-}
+}   
