@@ -20849,7 +20849,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/logo.png */ "./resources/js/assets/logo.png");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      image: _assets_logo_png__WEBPACK_IMPORTED_MODULE_0__["default"]
+    };
+  }
+});
 
 /***/ }),
 
@@ -20885,67 +20893,89 @@ var _hoisted_1 = {
   "class": "container"
 };
 var _hoisted_2 = {
-  "class": "d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+  "class": "d-flex flex-wrap justify-content-center py-3"
 };
 var _hoisted_3 = {
   "class": "col-6 row"
 };
 var _hoisted_4 = {
-  "class": "col-3"
+  "class": "col-12 p-4 pt-0 pb-0"
 };
-var _hoisted_5 = {
-  "class": "col-3"
-};
+var _hoisted_5 = ["src"];
 var _hoisted_6 = {
-  "class": "nav nav-pills"
+  "class": "col-12"
 };
 var _hoisted_7 = {
-  "class": "nav-item"
+  "class": "nav nav-pills"
 };
 var _hoisted_8 = {
+  "class": "nav-item"
+};
+var _hoisted_9 = {
+  "class": "nav-item"
+};
+var _hoisted_10 = {
+  "class": "nav-item"
+};
+var _hoisted_11 = {
+  "class": "nav-item"
+};
+var _hoisted_12 = {
   "class": "col-6 row justify-content-end"
 };
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "col-3"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-  action: ""
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  type: "text",
-  "class": "form-control",
-  name: "",
-  id: ""
-})])], -1 /* HOISTED */);
-var _hoisted_10 = {
-  "class": "col-3"
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-5 p-0 d-flex\"><a href=\"#\" class=\"text-decoration-none fs-6 fw-medium link-color mt-1\">Kontakty a čisla na oddelenia</a></div><div class=\"col-1 p-0\"><ul class=\"navbar-nav\"><li class=\"nav-item dropdown\"><button class=\"btn dropdown-toggle fs-6 border-0 text-darker\" data-bs-toggle=\"dropdown\" aria-expanded=\"true\"> SK </button><ul class=\"dropdown-menu dropdown-menu\"><li><a class=\"dropdown-item fs-6 text-darker\" href=\"#\">EN</a></li><li><a class=\"dropdown-item fs-6 text-darker\" href=\"#\">SK</a></li></ul></li></ul></div><div class=\"col-3\"><form action=\"\"><div class=\"input-group\"><input type=\"text\" class=\"form-control searchfield\" aria-label=\"Search\"><button type=\"submit\" class=\"btn btn-outline-secondary searchbox\"><i class=\"bi bi-search\"></i></button></div></form></div>", 3);
+var _hoisted_16 = {
+  "class": "col-2"
 };
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<footer class=\"footer\"><div class=\"bg-footer\"><div class=\"container-fluid container text-secondary pt-5\"><div class=\"row\"><div class=\"col-3\"><h6 class=\"text-footer fw-bold\">ADRESA A KONTAKT</h6><ul class=\"list-unstyled\"><li>ŠÚKL</li><li>Kvetná 11</li><li>825 08 Bratislava 26</li><li>Ústredňa:</li><li>+421-2-50701 111</li></ul><h6 class=\"text-footer fw-bold\">KONTAKTY</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">telefónne čísla</a></li><li><a href=\"#\">adresa</a></li><li><a href=\"#\">úradné hodiny</a></li><li><a href=\"#\">bankové spojenie</a></li></ul><h6 class=\"text-footer fw-bold\">INFORMACIE PRE VEREJNOST</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">zoznam vyvezenych liekov</a></li><li><a href=\"#\">MZ SR</a></li><li><a href=\"#\">Narodny portal zdravia</a></li></ul></div><div class=\"col-3\"><h6 class=\"text-footer fw-bold\">O NÁS</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">O NÁS</a></li><li><a href=\"#\">Dotazníky</a></li><li><a href=\"#\">Hlavní predstavitelia</a></li><li><a href=\"#\">Základné dokumenty</a></li><li><a href=\"#\">Zmluvy za ŠÚKL</a></li><li><a href=\"#\">História a súčasnosť</a></li><li><a href=\"#\">Národná spolupráca</a></li><li><a href=\"#\">Medzinárodná spolupráca</a></li><li><a href=\"#\">Poradné orgány</a></li><li><a href=\"#\">Legislatíva</a></li><li><a href=\"#\">Priestupky a iné správne delikty</a></li><li><a href=\"#\">Zoznam dlžníkov</a></li><li><a href=\"#\">Sadzobník ŠÚKL</a></li><li><a href=\"#\">Verejné obstarávanie</a></li><li><a href=\"#\">Vzdelávacie akcie a prezentácie</a></li><li><a href=\"#\">Konzultácie</a></li><li><a href=\"#\">Voľné pracovné miesta (0)</a></li><li><a href=\"#\">Poskytovanie informácií</a></li><li><a href=\"#\">Sťažnosti a petície</a></li></ul></div><div class=\"col-3\"><h6 class=\"text-footer fw-bold\">MÉDIÁ</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">Tlačové správy</a></li><li><a href=\"#\">Lieky v médiách</a></li><li><a href=\"#\">Kontakt pre média</a></li></ul><h6 class=\"text-footer fw-bold\">DATABAZY A SERVIS</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">Databáza liekov a zdravotníckych pomôcok</a></li><li><a href=\"#\">Iné zoznamy</a></li><li><a href=\"#\">Kontaktný formulár</a></li><li><a href=\"#\">Mapa stránok</a></li><li><a href=\"#\">A - Z index</a></li><li><a href=\"#\">Linky</a></li><li><a href=\"#\">RSS</a></li><li><a href=\"#\">Doplnok pre internetovy prehladavač</a></li><li><a href=\"#\">Prehliadače formatov</a></li></ul></div><div class=\"col-3\"><h6 class=\"text-footer fw-bold\">DROGOVÉ PREKURZORY</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">Aktuality</a></li><li><a href=\"#\">Legislativa</a></li><li><a href=\"#\">Linky</a></li></ul><h6 class=\"text-footer fw-bold\">INE</h6><ul class=\"list-unstyled link-list-footer\"><li><a href=\"#\">Linky</a></li><li><a href=\"#\">Mapa stranok</a></li><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">Podmenky pouzivania</a></li></ul><h6 class=\"text-primary fw-bold\">RAPID ALERT SYSTEM</h6><a href=\"#\">Rýchla výstraha vyplývajúca z nedostatkov v kvalite liekov</a></div></div><div class=\"row text-center py-3\"><div class=\"col\"><p> © 2024 Mykyta Kot </p></div></div></div></div></footer>", 1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   var _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: _ctx.image,
+    width: "30%",
+    alt: ""
+  }, null, 8 /* PROPS */, _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/",
-    "class": "d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    "class": "nav-item nav-link text-darker"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Nitra obce")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("O nas")];
     }),
     _: 1 /* STABLE */
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/",
-    "class": "nav-item nav-link"
+    "class": "nav-item nav-link text-darker"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Home")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Zoznam miest")];
     }),
     _: 1 /* STABLE */
-  })])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/",
+    "class": "nav-item nav-link text-darker"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Inšpekcia")];
+    }),
+    _: 1 /* STABLE */
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/",
+    "class": "nav-item nav-link text-darker"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Kontant")];
+    }),
+    _: 1 /* STABLE */
+  })])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/register",
-    "class": "btn btn-primary"
+    "class": "btn login-button fs-6"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Register")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Prihlasenie")];
     }),
     _: 1 /* STABLE */
-  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)]);
+  })])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view), _hoisted_17], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -21053,6 +21083,21 @@ var routes = [{
   path: '/',
   component: _components_HomePage_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
 }];
+
+/***/ }),
+
+/***/ "./resources/js/assets/logo.png":
+/*!**************************************!*\
+  !*** ./resources/js/assets/logo.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?39396e226da8f549aff07935e0baecd0");
 
 /***/ }),
 

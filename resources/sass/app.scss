@@ -1,3 +1,37 @@
 @import 'variables';
 @import "bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.scss";
+
+.searchbox{
+    border-left: 0px;
+    border-color: var(--bs-border-color);
+}
+.searchfield{
+    border-right: 0px;
+}
+.link{
+    color: var(link-color);
+}
+.text-darker{
+    color: var(--bs-dark);
+}
+.bg-footer{
+    background-color: $footer-bg;
+    font-size: small;
+    font-weight: 600;
+}
+.link-list-footer li a {
+    text-decoration: none;
+    color: var(--bs-secondary);
+}
+.link-list-footer li :hover {
+    transition: 200ms;
+    color: var(--bs-dark);
+}
+.text-footer{
+    color: var(footer-h-color);
+}
+.login-button{
+    background-color: $login-button-color;
+    color: var(--bs-light);
+}
