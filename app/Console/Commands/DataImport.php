@@ -51,6 +51,7 @@ class DataImport extends Command
                     echo("error getting place");
                     return Command::FAILURE;
                 }
+                //parse a place
                 echo("parsing $place \n");
                 $place = $webParser->getInfoAboutPlace($place);
                 if($place == 0){
@@ -58,6 +59,7 @@ class DataImport extends Command
                     return Command::FAILURE;
                 
                 }
+                //save to database
                 $place = new Place($place);
                 $place->save_to_database();
             }

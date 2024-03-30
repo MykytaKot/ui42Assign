@@ -161,13 +161,17 @@ class WebsiteParsing extends Model
             $area = $seconddatatable->find('tr', 5)->find('td', 1)->plaintext;
             $appeared_at = $seconddatatable->find('tr', 6)->find('td', 1)->plaintext;
             $mayor_name = $seconddatatable->find('tr', 7)->find('td', 1)->plaintext;
+            //check if there is a 9th row
             if ($seconddatatable->find('tr', 8) != null) {
-                if($seconddatatable->find('tr', 8)->find('td', 0)->plaintext == 'Prednosta:'){
+                //check if it is a mobile phone or boss
+                if ($seconddatatable->find('tr', 8)->find('td', 0)->plaintext == 'Prednosta:') {
+                    //if boss is not empty, set it to boss
                     $boss = $seconddatatable->find('tr', 8)->find('td', 1)->plaintext;
-                    if($seconddatatable->find('tr', 9) != null){
+                    //if it was boss then check if 10th row exists
+                    if ($seconddatatable->find('tr', 9) != null) {
                         $mobile_phone = $seconddatatable->find('tr', 9)->find('td', 1)->plaintext;
                     }
-                }else{
+                } else {
                     $mobile_phone = $seconddatatable->find('tr', 8)->find('td', 1)->plaintext;
                 }
             }

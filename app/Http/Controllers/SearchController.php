@@ -16,8 +16,7 @@ class SearchController extends Controller
     public function show($name)
     {
         
-        $places = Place::where('name', 'LIKE', '%' . $name . '%')
-               ->get()->toArray();
+        $places = Place::where('name', 'LIKE', '%' . $name . '%')->get()->toArray();
         return response()->json($places);
     }
 }

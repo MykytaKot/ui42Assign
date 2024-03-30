@@ -31,7 +31,7 @@ class Place extends Model
 
     public function __construct($array = null)
     {
-
+        // if array is not null, set all the values from the array
         if ($array != null) {
             $this->img_path = $array['img_path'];
             $this->name = $array['name'];
@@ -61,14 +61,16 @@ class Place extends Model
 
     public function save_to_database()
     {
+        //check if place already exists in database 
         try {
             $get = DB::table('places')->where('name', $this->name)->get();
             if ($get->count() > 0) {
-                if($this->latitude == "" || $this->longitude == ""){
+                //if latitude or longitude is empty, set it to the value from the database
+                if ($this->latitude == "" || $this->longitude == "") {
                     $this->latitude = $get[0]->latitude;
                     $this->longitude = $get[0]->longitude;
                 }
-                   
+
                 DB::table('places')->where('name', $this->name)->update([
                     'img_path' => $this->img_path,
                     'name' => $this->name,
@@ -93,7 +95,7 @@ class Place extends Model
                 ]);
                 return 0;
             } else {
-
+                //if place does not exist in database, insert it
                 $id = DB::table('places')->insertGetId([
                     'img_path' => $this->img_path,
                     'name' => $this->name,
@@ -124,39 +126,42 @@ class Place extends Model
             return 0;
         }
     }
-    public function getName(){
+    public function getName()
+    {
         return $this->name;
     }
 
 
     public function geocode()
     {
-        try{
-        $address = $this->city_hall_address;
+        //geocode a place using poisonstack api and save the coordinates to latitude
+        //it has a bug with city Nitra its not my error, its a bug in the api
+        try {
+            $address = $this->city_hall_address;
 
-        $queryString = http_build_query([
-            'access_key' => env('POSITIONSTACK_API_KEY'),
-            'query' => $address,
-            'country'=>'SK',
-            'output' => 'json',
-            'limit' => 1,
-        ]);
+            $queryString = http_build_query([
+                'access_key' => env('POSITIONSTACK_API_KEY'),
+                'query' => $address,
+                'country' => 'SK',
+                'output' => 'json',
+                'limit' => 1,
+            ]);
 
-        $ch = curl_init(sprintf('%s?%s', 'http://api.positionstack.com/v1/forward', $queryString));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $ch = curl_init(sprintf('%s?%s', 'http://api.positionstack.com/v1/forward', $queryString));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        $json = curl_exec($ch);
+            $json = curl_exec($ch);
 
-        curl_close($ch);
-
-        $apiResult = json_decode($json, true);
-        $this->latitude = $apiResult['data'][0]['latitude'];
-        $this->longitude = $apiResult['data'][0]['longitude'];
-        $this->save_to_database();
-        return 1;
-    }catch(\Exception $e){
-        echo("error geocoding place " . $e->getMessage() . " \n");
-        return 0;
-    }
+            curl_close($ch);
+            //decode the json and save the latitude and longitude
+            $apiResult = json_decode($json, true);
+            $this->latitude = $apiResult['data'][0]['latitude'];
+            $this->longitude = $apiResult['data'][0]['longitude'];
+            $this->save_to_database();
+            return 1;
+        } catch (\Exception $e) {
+            echo ("error geocoding place " . $e->getMessage() . " \n");
+            return 0;
+        }
     }
 }

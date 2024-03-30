@@ -28,10 +28,13 @@ class AddGeocode extends Command
      */
     public function handle()
     {
+        //getting all places
         $all_places = Place::all();
         foreach ($all_places as $place) {
             $place = new Place($place->toArray());
+            //geocode a place
             $status = $place->geocode();
+            //check if geocoding was successful
             if ($status == 0) {
                 echo ("error geocoding place " . $place->getName(). "\n");
                 return Command::FAILURE;
