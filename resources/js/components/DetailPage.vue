@@ -117,7 +117,7 @@
             </div>
         </div>
         <div class="row px-2 ">
-        <div class="shadow p-3 col-6 mb-4 w-fit-content rounded">
+        <div class="shadow p-3 col-md-6 col-sm-12 mb-4  rounded">
             <h4>{{ placeData.name }} na mape </h4>
             <div style="height:40vh;">
                 <l-map ref="map" v-model:zoom="zoom" :center="[placeData.latitude, placeData.longitude]">

@@ -23313,7 +23313,7 @@ var _hoisted_73 = {
   "class": "row px-2"
 };
 var _hoisted_74 = {
-  "class": "shadow p-3 col-6 mb-4 w-fit-content rounded"
+  "class": "shadow p-3 col-md-6 col-sm-12 mb-4 rounded"
 };
 var _hoisted_75 = {
   style: {
