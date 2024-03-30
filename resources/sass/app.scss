@@ -35,3 +35,32 @@
     background-color: $login-button-color;
     color: var(--bs-light);
 }
+.login-button:hover{
+    background-color: $login-button-hover ;
+    color: var(--bs-light);
+}
+.gradient-bg{
+    background: linear-gradient(180deg, rgb(9, 120, 240) 0%, rgb(19, 172, 247) 100%);
+}
+.main-search{
+    min-height: 75vh;
+    
+}
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.big-text{
+    font-size: 4.5rem;
+    
+}
+.h-fit-content{
+    height: fit-content;
+}
+.w-fit-content{
+    width: fit-content;
+}
+.align-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
