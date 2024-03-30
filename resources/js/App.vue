@@ -57,7 +57,7 @@
            <div class="col-12">
             <ul class="nav nav-pills">
                 <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">O nas</router-link></li>
-                <li class="nav-item"><router-link to="/city/2" class="nav-item nav-link text-darker">Zoznam miest</router-link></li>
+                <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Zoznam miest</router-link></li>
                 <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Inšpekcia</router-link></li>
                 <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Kontant</router-link></li>
 
