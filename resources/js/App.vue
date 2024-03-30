@@ -51,7 +51,8 @@
             <div class="col-5 row">
 
             <div class="col-12 p-4 pt-0 pb-0"> 
-                <img :src="image" width="45%"  alt="" />
+                <router-link to="/" ><img :src="image" width="45%"  alt="" /></router-link>
+                
 
             </div>
            <div class="col-12">
@@ -59,7 +60,7 @@
                 <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">O nas</router-link></li>
                 <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Zoznam miest</router-link></li>
                 <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Inšpekcia</router-link></li>
-                <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Kontant</router-link></li>
+                <li class="nav-item"><router-link to="/" class="nav-item nav-link text-darker">Kontakt</router-link></li>
 
 
             </ul>
@@ -105,7 +106,7 @@
         </header>
     </div>
 
-        <router-view class="m-0"> </router-view>
+        <router-view > </router-view>
         <footer class="footer mt-0">
         <div class="bg-footer">
         <div class="container-fluid container text-secondary pt-5 ">

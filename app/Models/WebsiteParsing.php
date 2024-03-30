@@ -93,6 +93,7 @@ class WebsiteParsing extends Model
             $fax = "";
             $area = "";
             $website = "";
+            $boss = "";
             $ico = "";
             $people = "";
             $region = "";
@@ -136,7 +137,13 @@ class WebsiteParsing extends Model
             $phone = $firstdatatable->find('td', 8)->plaintext;
             $fax = $firstdatatable->find('td', 11)->plaintext;
             $city_hall_address = $firstdatatable->find('td', 12)->plaintext . "," . $firstdatatable->find('td', 15)->plaintext;
-            $email = $firstdatatable->find('td', 14)->plaintext;
+            $emails = $firstdatatable->find('td', 14);
+            $emailarray = [];
+            //making a string from all websites links separated by comma
+            foreach ($emails->find('a') as $email) {
+                $emailarray[] = $email->plaintext;
+            }
+            $email = implode(",", $emailarray);
             $websites = $firstdatatable->find('td', 17);
             $webarray = [];
             //making a string from all websites links separated by comma
@@ -155,7 +162,14 @@ class WebsiteParsing extends Model
             $appeared_at = $seconddatatable->find('tr', 6)->find('td', 1)->plaintext;
             $mayor_name = $seconddatatable->find('tr', 7)->find('td', 1)->plaintext;
             if ($seconddatatable->find('tr', 8) != null) {
-                $mobile_phone = $seconddatatable->find('tr', 8)->find('td', 1)->plaintext;
+                if($seconddatatable->find('tr', 8)->find('td', 0)->plaintext == 'Prednosta:'){
+                    $boss = $seconddatatable->find('tr', 8)->find('td', 1)->plaintext;
+                    if($seconddatatable->find('tr', 9) != null){
+                        $mobile_phone = $seconddatatable->find('tr', 9)->find('td', 1)->plaintext;
+                    }
+                }else{
+                    $mobile_phone = $seconddatatable->find('tr', 8)->find('td', 1)->plaintext;
+                }
             }
             //putting place info into array
             $placeInfo = array(
@@ -172,6 +186,7 @@ class WebsiteParsing extends Model
                 "ico" => $ico,
                 "people" => $people,
                 "region" => $region,
+                "boss" => $boss,
                 "district" => $district,
                 "appeared_at" => $appeared_at,
                 "autonomous_region" => $autonomous_region

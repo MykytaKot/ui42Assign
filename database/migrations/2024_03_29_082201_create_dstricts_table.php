@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('fax')->default('');
             $table->string('website')->default('');
             $table->string('ico');
+            $table->string('boss');
             $table->string('people');
             $table->string('region');
             $table->string('area');

@@ -13,10 +13,11 @@ class SearchController extends Controller
         $products = Place::orderBy('name', 'ASC')->get()->toArray();
         return $products;
     }
-    public function show($id)
+    public function show($name)
     {
-        var_dump($id);
-        $product = Place::find($id);
-        return response()->json($product);
+        
+        $places = Place::where('name', 'LIKE', '%' . $name . '%')
+               ->get()->toArray();
+        return response()->json($places);
     }
 }

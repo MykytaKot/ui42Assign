@@ -9,7 +9,7 @@ export const routes = [
     },
     {
         name: 'city',
-        path: '/city/:cityid',
+        path: '/city/:id',
         component: DetailPage
     }
 ];

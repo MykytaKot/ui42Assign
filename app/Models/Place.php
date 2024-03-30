@@ -27,6 +27,7 @@ class Place extends Model
     private $autonomous_region = "";
     private $latitude = "";
     private $longitude = "";
+    private $boss = "";
 
     public function __construct($array = null)
     {
@@ -54,6 +55,7 @@ class Place extends Model
             if (isset($array['longitude'])) {
                 $this->longitude = $array['longitude'];
             }
+            $this->boss = $array['boss'];
         }
     }
 
@@ -62,7 +64,11 @@ class Place extends Model
         try {
             $get = DB::table('places')->where('name', $this->name)->get();
             if ($get->count() > 0) {
-                //update 
+                if($this->latitude == "" || $this->longitude == ""){
+                    $this->latitude = $get[0]->latitude;
+                    $this->longitude = $get[0]->longitude;
+                }
+                   
                 DB::table('places')->where('name', $this->name)->update([
                     'img_path' => $this->img_path,
                     'name' => $this->name,
@@ -82,6 +88,7 @@ class Place extends Model
                     'autonomous_region' => $this->autonomous_region,
                     'latitude' => $this->latitude,
                     'longitude' => $this->longitude,
+                    'boss' => $this->boss,
                     'updated_at' => date('Y-m-d H:i:s')
                 ]);
                 return 0;
@@ -105,6 +112,7 @@ class Place extends Model
                     'appeared_at' => $this->appeared_at,
                     'latitude' => $this->latitude,
                     'longitude' => $this->longitude,
+                    'boss' => $this->boss,
                     'autonomous_region' => $this->autonomous_region,
                     'created_at' => date('Y-m-d H:i:s')
 
@@ -120,53 +128,6 @@ class Place extends Model
         return $this->name;
     }
 
-    public function getPlace($name)
-    {
-        $place = DB::table('places')->where('name', $name)->get();
-        if ($place->count() > 0) {
-            return $place->first();
-        } else {
-            return 0;
-        }
-    }
-
-    public function getPlacesByDistrict($district)
-    {
-        $places = DB::table('places')->where('district', $district)->get();
-        if ($places->count() > 0) {
-            return $places;
-        } else {
-            return 0;
-        }
-    }
-    public function getPlacesByRegion($region)
-    {
-        $places = DB::table('places')->where('region', $region)->get();
-        if ($places->count() > 0) {
-            return $places;
-        } else {
-            return 0;
-        }
-    }
-    public function getPlacesByAutonomousRegion($autonomous_region)
-    {
-        $places = DB::table('places')->where('autonomous_region', $autonomous_region)->get();
-        if ($places->count() > 0) {
-            return $places;
-        } else {
-            return 0;
-        }
-    }
-
-    public function getPlaceById($id)
-    {
-        $place = DB::table('places')->where('id', $id)->get();
-        if ($place->count() > 0) {
-            return $place->first();
-        } else {
-            return 0;
-        }
-    }
 
     public function geocode()
     {
