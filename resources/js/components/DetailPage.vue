@@ -108,7 +108,7 @@
 
                 </div>
                 <div class="bg-white col-md-6 col-sm-12 d-none d-md-flex d-lg-flex d-xl-flex  rounded-end row ">
-                    <div class="col-12 detail-image ">
+                    <div class="col-12 detail-image " v-if="placeData.img_path != null">
                         <img :src="'/' + placeData.img_path" alt="">
                     </div>
 
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </div>
-        <div class="row px-2 ">
+        <div class="row px-2 " v-if="placeData.latitude != '' && placeData.longitude != ''">
         <div class="shadow p-3 col-md-6 col-sm-12 mb-4  rounded">
             <h4>{{ placeData.name }} na mape </h4>
             <div style="height:40vh;">
