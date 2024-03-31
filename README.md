@@ -37,7 +37,7 @@ npm install
 7. **Build Vue.js assets:**
 ```bash
 npm run dev  #(for development mode)
-npm run build  #(for production mode)
+npm run prod  #(for production mode)
 ```
 ## Usage
 
