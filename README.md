@@ -41,14 +41,15 @@ npm run prod  #(for production mode)
 ```
 ## Usage
 
-1. **Import and geocode cities from nitra**
+
+1. **Start server**
+```bash
+php artisan serve
+```
+2. **Import and geocode cities from nitra**
 ```bash
 php artisan data:import
 php artisan data:geocode
-```
-2. **Start server**
-```bash
-php artisan serve
 ```
 <br />
 The application should be accessible in your browser at http://localhost:8000 by default.
