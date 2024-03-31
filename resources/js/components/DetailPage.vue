@@ -6,7 +6,7 @@
         <div class="container align-center">
             <div class="row shadow border-1 detail-margin w-100 rounded">
                 <div class="col-12 d-flex d-md-none d-lg-none d-xl-none p-3">
-                    <div class="col-3 detail-image">
+                    <div class="col-3 detail-image" v-if="placeData.hasOwnProperty('img_path')">
                         <img :src="'/' + placeData.img_path" alt="">
                     </div>
                     <h1 class="text-primary col-9 align-center">{{ placeData.name }}</h1>
@@ -108,7 +108,7 @@
 
                 </div>
                 <div class="bg-white col-md-6 col-sm-12 d-none d-md-flex d-lg-flex d-xl-flex  rounded-end row ">
-                    <div class="col-12 detail-image " v-if="placeData.img_path != null">
+                    <div class="col-12 detail-image " v-if="placeData.hasOwnProperty('img_path')">
                         <img :src="'/' + placeData.img_path" alt="">
                     </div>
 

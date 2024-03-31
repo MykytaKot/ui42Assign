@@ -47,7 +47,7 @@
                                     </div>
                                 </form>
                             </li>
-                            <li><router-link to="/register"
+                            <li><router-link to="/"
                                     class="btn login-button fs-6 m-0 mt-2">Prihlasenie</router-link></li>
                         </ul>
                     </div>
@@ -113,7 +113,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-2 p-0"> <router-link to="/register"
+                        <div class="col-2 p-0"> <router-link to="/"
                                 class="btn login-button  fs-6">Prihlasenie</router-link></div>
 
                     </div>
