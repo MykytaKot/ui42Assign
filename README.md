@@ -18,13 +18,14 @@ git clone https://github.com/MykytaKot/ui42_Assignment.git
 cd 'project-root'
 composer install
 ```
-3. **Generate application key:**
+
+3. **Setup configuration:** <br />
+* Copy .env.example to .env and update the database credentials according to your environment.
+* Register at [positionstack](https://positionstack.com/) geocoding website and put your api key to POSITIONSTACK_API_KEY variable in .env
+4. **Generate application key:**
 ```bash
 php artisan key:generate
 ```
-4. **Setup configuration:** <br />
-* Copy .env.example to .env and update the database credentials according to your environment.
-* Register at [positionstack](https://positionstack.com/) geocoding website and put your api key to POSITIONSTACK_API_KEY variable in .env
 5. **Migrate database:**
 ```bash
 php artisan migrate
