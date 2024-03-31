@@ -155,7 +155,7 @@ class Place extends Model
             curl_close($ch);
             //decode the json and save the latitude and longitude
             $apiResult = json_decode($json, true);
-            if($apiResult.hasKey('error')){
+            if(array_key_exists('error', $apiResult)){
                 echo ("Api error: ". $apiResult['error']['message'] . " \n");
                 return 0;
             }
